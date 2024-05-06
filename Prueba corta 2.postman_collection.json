@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "4d3a13cb-2aaf-4da2-aa65-77d3c5575ea0",
+		"name": "Prueba corta 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33689763"
+	},
+	"item": [
+		{
+			"name": "Create Chair",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Nombre\":\"ola\",\r\n    \"Tipo\":\"aloo\",\r\n    \"Material\":\"alo\",\r\n    \"Color\":\"ola\",\r\n    \"Altura\":2,\r\n    \"Anchura\":3,\r\n    \"Profundidad\":4,\r\n    \"Precio\":25,\r\n    \"Stock\":23\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5275/api/chair/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5275",
+					"path": [
+						"api",
+						"chair",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Chairs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5275/api/chair/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5275",
+					"path": [
+						"api",
+						"chair",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get chair by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5275/api/chair/ola",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5275",
+					"path": [
+						"api",
+						"chair",
+						"ola"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit stock of Chair by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "90",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5275/api/chair/1/stock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5275",
+					"path": [
+						"api",
+						"chair",
+						"1",
+						"stock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Purchase a Chair",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 1,\r\n    \"cant\": 2,\r\n    \"totalPay\":50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5275/api/chair/purchase",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5275",
+					"path": [
+						"api",
+						"chair",
+						"purchase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a chair by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5275/api/chair/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5275",
+					"path": [
+						"api",
+						"chair",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
